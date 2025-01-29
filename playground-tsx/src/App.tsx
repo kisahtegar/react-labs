@@ -1,28 +1,9 @@
-import ComponentFactory, { ComponentConfig } from "./utils/ComponentFactory";
-
-const buttonConfig: ComponentConfig = {
-  type: "button",
-  props: {
-    label: "Click Me",
-    onClick: () => alert("Clicked"),
-    disabled: false,
-  },
-};
-
-const cardConfig: ComponentConfig = {
-  type: "card",
-  props: {
-    title: "Card Title",
-    content: "Some content here.",
-    footer: "Footer",
-  },
-};
+import Users from "./components/Users";
 
 const App = () => {
   return (
     <div>
-      {ComponentFactory(buttonConfig)}
-      {ComponentFactory(cardConfig)}
+      <Users />
     </div>
   );
 };

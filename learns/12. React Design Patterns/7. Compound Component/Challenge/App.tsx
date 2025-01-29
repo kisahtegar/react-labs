@@ -1,6 +1,13 @@
 import { useState } from "react";
 import Modal from "./components/Modal";
 
+/**
+ * Main application component that controls the modal visibility.
+ *
+ * It renders a button to open the modal, and conditionally displays the modal content when `isModalOpen` is `true`.
+ *
+ * @returns The main app with a button to trigger the modal, and the modal itself containing a title, body, and footer.
+ */
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 

@@ -7,6 +7,14 @@ interface Todo {
   completed: boolean;
 }
 
+/**
+ * Fetches a paginated list of todos from the JSONPlaceholder API.
+ *
+ * @param {Object} params - Parameters for the fetch function.
+ * @param {number} [params.pageParam=1] - The current page to fetch.
+ * @returns {Promise<Todo[]>} A promise that resolves to the list of todos.
+ * @throws {Error} If the network response is not ok.
+ */
 const fetchTodos = async ({
   pageParam = 1,
 }: {
@@ -19,6 +27,12 @@ const fetchTodos = async ({
   return response.json();
 };
 
+/**
+ * InfiniteQueries component demonstrates infinite scrolling using the
+ * `useInfiniteQuery` hook from `react-query`.
+ *
+ * It fetches data incrementally as the user scrolls near the bottom of the list.
+ */
 const InfiniteQueries = () => {
   const {
     data,
@@ -28,15 +42,18 @@ const InfiniteQueries = () => {
     hasNextPage,
     isFetchingNextPage,
   } = useInfiniteQuery<Todo[], Error>({
-    queryKey: ["todos"],
-    queryFn: fetchTodos,
-    getNextPageParam: (lastPage, pages) => {
-      return lastPage.length === 10 ? pages.length + 1 : undefined;
-    },
+    queryKey: ["todos"], // Unique key for the query
+    queryFn: fetchTodos, // Fetch function
+    getNextPageParam: (lastPage, pages) =>
+      lastPage.length === 10 ? pages.length + 1 : undefined, // Determines if more pages exist
   });
 
-  const loadMoreRef = useRef<HTMLDivElement | null>(null);
+  const loadMoreRef = useRef<HTMLDivElement | null>(null); // Ref for the load more trigger element
 
+  /**
+   * Sets up an IntersectionObserver to automatically fetch the next page
+   * when the `loadMoreRef` comes into view.
+   */
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -69,7 +86,7 @@ const InfiniteQueries = () => {
     <div>
       <h1>Todos</h1>
       <div>
-        {data.pages.map((page, index) => (
+        {data?.pages.map((page, index) => (
           <div key={index}>
             {page.map((todo: Todo) => (
               <pre key={todo.id}>{JSON.stringify(todo, null, 2)}</pre>
@@ -77,6 +94,7 @@ const InfiniteQueries = () => {
           </div>
         ))}
       </div>
+      {/* Load more trigger */}
       <div ref={loadMoreRef} style={{ height: "1px" }}>
         {isFetchingNextPage && <div>Loading more...</div>}
       </div>

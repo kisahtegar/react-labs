@@ -1,5 +1,16 @@
 import { useEffect, useState } from "react";
 
+/**
+ * WithoutTanstackQuery
+ *
+ * This component demonstrates data fetching without using TanStack Query.
+ * It fetches a single TODO item based on an ID from the JSONPlaceholder API.
+ * The ID is incremented with a button click, triggering a refetch.
+ *
+ * @example
+ * // Renders the WithoutTanstackQuery component
+ * <WithoutTanstackQuery />
+ */
 const WithoutTanstackQuery = () => {
   const [id, setId] = useState(1);
   const [data, setData] = useState(null);
