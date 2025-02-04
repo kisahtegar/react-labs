@@ -1,50 +1,77 @@
-# React + TypeScript + Vite
+<p align="center">
+   <a href="https://react.dev/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" width="200">
+   </a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+   <a href="https://react.dev/">
+      <img src="https://img.shields.io/badge/React-TypeScript%20Library-blue" alt="React Badge">
+   </a>
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Overview
 
-## Expanding the ESLint configuration
+The **Playground TSX** directory is a dedicated space for experimenting with React and TypeScript. This is where we dive into TypeScript concepts, test component ideas, and explore advanced features with the type-safe benefits of TypeScript.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🔬 What You'll Find Here
 
-- Configure the top-level `parserOptions` property like this:
+- **React + TypeScript Basics:** Quick experiments with TSX, props, and state.
+- **Type Safety:** Examples of typing props, state, and custom hooks for robust components.
+- **Advanced Patterns:** Hands-on practice with Context API, HOCs, and Render Props.
+- **Performance Testing:** Optimizing React applications with TypeScript.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 How to Use
+
+1. Clone the repository and navigate to the `playground-tsx` directory.
+
+   ```bash
+   git clone https://github.com/kisahtegar/react-labs.git
+   cd react-labs/playground-tsx
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and explore the playground at `http://localhost:3000`.
+
+## 📁 Example Directory Structure
+
+```plaintext
+playground-tsx/
+├── src/
+│   ├── components/    # Reusable React components
+│   ├── hooks/         # Custom hooks with TypeScript
+│   ├── pages/         # Page components for experiments
+│   └── utils/         # Utility functions
+├── index.html         # Main HTML file
+├── package.json       # Project metadata
+├── vite.config.ts     # Vite configuration with TypeScript
+└── README.md          # Documentation (this file)
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 💡 Key Learning Objectives
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Master React and TypeScript integration.
+- Learn to type React components and hooks for safer and scalable applications.
+- Explore advanced TypeScript patterns in React, including:
+  - Generic components
+  - Utility types and interfaces
+  - Handling complex state shapes
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## ✨ About Us
+
+- 💻 All of my projects are available at **[github.com/kisahtegar](https://github.com/kisahtegar)**
+- 📧 How to reach me **<code.kisahtegar@gmail.com>**
+- 📄 Know about my experiences **[kisahcode.web.app](https://kisahcode.web.app)**
