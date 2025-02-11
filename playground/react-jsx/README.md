@@ -6,7 +6,7 @@
 
 <p align="center">
    <a href="https://react.dev/">
-      <img src="https://img.shields.io/badge/React-TypeScript%20Library-blue" alt="React Badge">
+      <img src="https://img.shields.io/badge/React-JavaScript%20Library-blue" alt="React Badge">
    </a>
 </p>
 
@@ -14,22 +14,22 @@
 
 ## ✨ Overview
 
-The **Playground TSX** directory is a dedicated space for experimenting with React and TypeScript. This is where we dive into TypeScript concepts, test component ideas, and explore advanced features with the type-safe benefits of TypeScript.
+The **Playground for React JSX** directory is a dedicated space for experimenting with React and JavaScript. This is where we dive into React concepts, test component ideas, and explore advanced features using modern JavaScript practices.
 
 ## 🔬 What You'll Find Here
 
-- **React + TypeScript Basics:** Quick experiments with TSX, props, and state.
-- **Type Safety:** Examples of typing props, state, and custom hooks for robust components.
-- **Advanced Patterns:** Hands-on practice with Context API, HOCs, and Render Props.
-- **Performance Testing:** Optimizing React applications with TypeScript.
+- **React Basics:** Quick experiments with JSX, props, and state.
+- **JavaScript Integration:** Examples of using JavaScript with React for building dynamic and interactive components.
+- **Hooks Exploration:** Hands-on practice with custom and built-in hooks like `useState`, `useEffect`, and `useContext`.
+- **Performance Testing:** Trying out memoization, lazy loading, and code splitting to optimize apps.
 
 ## 🚀 How to Use
 
-1. Clone the repository and navigate to the `playground-tsx` directory.
+1. Clone the repository and navigate to the `react-jsx` directory.
 
    ```bash
    git clone https://github.com/kisahtegar/react-labs.git
-   cd react-labs/playground-tsx
+   cd react-labs/playground/react-jsx
    ```
 
 2. Install dependencies:
@@ -49,26 +49,26 @@ The **Playground TSX** directory is a dedicated space for experimenting with Rea
 ## 📁 Example Directory Structure
 
 ```plaintext
-playground-tsx/
+react-jsx/
 ├── src/
 │   ├── components/    # Reusable React components
-│   ├── hooks/         # Custom hooks with TypeScript
+│   ├── hooks/         # Custom hooks
 │   ├── pages/         # Page components for experiments
 │   └── utils/         # Utility functions
 ├── index.html         # Main HTML file
 ├── package.json       # Project metadata
-├── vite.config.ts     # Vite configuration with TypeScript
+├── vite.config.js     # Vite configuration
 └── README.md          # Documentation (this file)
 ```
 
 ## 💡 Key Learning Objectives
 
-- Master React and TypeScript integration.
-- Learn to type React components and hooks for safer and scalable applications.
-- Explore advanced TypeScript patterns in React, including:
-  - Generic components
-  - Utility types and interfaces
-  - Handling complex state shapes
+- Master React basics and core concepts.
+- Learn how to integrate JavaScript for dynamic functionality and enhanced user experience.
+- Explore advanced React features and patterns, including:
+  - Component Composition
+  - Context API vs Redux for state management
+  - Performance optimizations
 
 ## ✨ About Us
 
