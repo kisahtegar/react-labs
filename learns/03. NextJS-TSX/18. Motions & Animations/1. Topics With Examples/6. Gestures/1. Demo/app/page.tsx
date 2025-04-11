@@ -4,29 +4,38 @@ const Gestures = () => {
   return (
     <div>
       {/* whileHover */}
-      {/* <motion.div
+      <motion.div
         whileHover={{ scale: 1.2, rotate: 10 }}
         transition={{ type: "spring", stiffness: 300 }}
         className="box"
-      /> */}
+        style={{
+          backgroundColor: "blue",
+        }}
+      />
       {/* ------------------- */}
 
       {/* ------------------- */}
       {/* whileTap */}
-      {/* <motion.div
+      <motion.div
         whileTap={{ scale: 0.8, backgroundColor: "orange" }}
         transition={{ type: "spring", stiffness: 300 }}
         className="box"
-      /> */}
+        style={{
+          backgroundColor: "red",
+        }}
+      />
 
       {/* ------------------- */}
       {/* whileDrag */}
-      {/* <motion.div
+      <motion.div
         drag
         whileDrag={{ scale: 1.1, backgroundColor: "orange" }}
         transition={{ type: "spring", stiffness: 300 }}
         className="box"
-      /> */}
+        style={{
+          backgroundColor: "green",
+        }}
+      />
 
       {/* ------------------- */}
       {/* whileDrag Constraints */}
